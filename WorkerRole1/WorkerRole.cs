@@ -65,7 +65,7 @@ namespace WorkerRole1
                        .ToLower();
 
 
-                    Password p = new Password(username, password, reversePhrase);
+                    Password p = new Password(username, encoded, reversePhrase);
 
                     CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
                     table = tableClient.GetTableReference("reverse");
